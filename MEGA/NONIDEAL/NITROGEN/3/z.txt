@@ -1,2 +1,0 @@
-Pressure/297/Density/Temperature*1e6/300/11.3
-0.805
