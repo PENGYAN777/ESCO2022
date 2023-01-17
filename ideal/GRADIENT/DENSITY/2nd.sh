@@ -4,7 +4,7 @@
 ########### SLURM CONFIGURATION ############
 
 # Name of the job
-#SBATCH --job-name=2nd_adapt
+#SBATCH --job-name=i_g_d
 #SBATCH --output=slurm-%j.out
 #SBATCH --no-requeue
 
@@ -17,7 +17,7 @@
 #SBATCH --time=460:00:00
 
 # Quality of service
-#SBATCH --qos=default-users
+#SBATCH --qos=default-staff
 
 ############################################
 
@@ -101,7 +101,7 @@ mpirun -n $SLURM_NTASKS $MPI_FLAGS SU2_CFD su2.cfg
 
 #sed -i 's/^\s*READ_BINARY_RESTART=.*$/READ_BINARY_RESTART= NO/' su2.cfg
 sed -i 's/^\s*RESTART_SOL=.*$/RESTART_SOL= YES/' su2.cfg # THIS IS FOR RESTART AT HIGHER LEVELS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-sed -i 's/^\s*ITER=.*$/ITER= 10000/' su2.cfg
+sed -i 's/^\s*ITER=.*$/ITER= 3000/' su2.cfg
 sed -i 's/^\s*MUSCL_FLOW=.*$/MUSCL_FLOW= YES/' su2.cfg
 sed -i 's/^\s*SOLUTION_FILENAME=.*$/SOLUTION_FILENAME= 'solution_interpolated.dat'/' su2.cfg
 #sed -i 's/^\s*CFL_ADAPT_PARAM=.*$/CFL_ADAPT_PARAM= ( 0.5, 1.5, 20.0, 500.0 )/' su2.cfg
