@@ -19,18 +19,19 @@ n10= pd.read_csv("../../ideal/GRADIENT/DENSITY/n10.csv", ",", skiprows=0)
 
 
 fig1 = plt.figure( dpi=300)
+lwh = 2
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
-axes.plot(n0.iloc[:,1]/6.5 , n0.iloc[:,0] , 'k', lw=2, label="$n=0$")
-axes.plot(n4.iloc[:,1]/6.5 , n4.iloc[:,0] , 'g', lw=2, label="$n=4$")
-axes.plot(n6.iloc[:,1]/6.5 , n6.iloc[:,0] , 'b', lw=2, label="$n=6$")
-axes.plot(n8.iloc[:,1]/6.5 , n8.iloc[:,0] , 'y', lw=2, label="$n=8$")
-axes.plot(n10.iloc[:,1]/6.5 , n10.iloc[:,0] , 'r', lw=2, label="$n=10$")
+axes.plot(n0.iloc[:,1] , n0.iloc[:,0]/n0.iloc[0,0] , 'k', lw=lwh, label="$n=0$")
+axes.plot(n4.iloc[:,1] , n4.iloc[:,0]/n4.iloc[0,0] , 'g', lw=lwh, label="$n=4$")
+axes.plot(n6.iloc[:,1] , n6.iloc[:,0]/n6.iloc[0,0] , 'b', lw=lwh, label="$n=6$")
+axes.plot(n8.iloc[:,1] , n8.iloc[:,0]/n8.iloc[0,0] , 'y', lw=lwh, label="$n=8$")
+axes.plot(n10.iloc[:,1] , n10.iloc[:,0]/n10.iloc[0,0] , 'r', lw=lwh, label="$n=10$")
 
 
 
 
 
-axes.set_xlabel('$X/D$',fontsize=12)
+axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 axes.set_ylabel('$P/P_t$',fontsize=12) 
 # axes.set_aspect('equal', 'box')
