@@ -15,7 +15,7 @@ refer= pd.read_csv("../../../../nonideal/nn/reference/radial.csv", ",", skiprows
 gd= pd.read_csv("../../../../nonideal/nn/gradient/d/radial.csv", ",", skiprows=0)
 gm= pd.read_csv("../../../../nonideal/nn/gradient/m/radial.csv", ",", skiprows=0)
 gp= pd.read_csv("../../../../nonideal/nn/gradient/p/radial.csv", ",", skiprows=0)
-# gt= pd.read_csv("../../../ideal/GRADIENT/TEMPERATURE/radial.csv", ",", skiprows=0)
+gt= pd.read_csv("../../../../nonideal/nn/gradient/t/radial.csv", ",", skiprows=0)
 
 
 
@@ -26,7 +26,7 @@ axes.plot(refer.iloc[:,7] , refer.iloc[:,0]/refer.iloc[0,0], 'k', lw=lwh, label=
 axes.plot(gd.iloc[:,7] , gd.iloc[:,0]/refer.iloc[0,0] , 'r', lw=lwh, label="$\\nabla \\rho$")
 axes.plot(gm.iloc[:,7] , gm.iloc[:,0]/refer.iloc[0,0] , 'b', lw=lwh, label="$\\nabla M$")
 axes.plot(gp.iloc[:,7] , gp.iloc[:,0]/refer.iloc[0,0] , 'k--', lw=lwh, label="$\\nabla P$")
-# axes.plot(gt.iloc[:,7] , gt.iloc[:,0]/refer.iloc[0,0] , 'r--', lw=lwh, label="$\\nabla T$")
+axes.plot(gt.iloc[:,7] , gt.iloc[:,0]/refer.iloc[0,0] , 'r--', lw=lwh, label="$\\nabla T$")
 
 
 axes.set_xlabel('$Y[mm]$',fontsize=12)
@@ -48,7 +48,7 @@ axes.plot(refer.iloc[:,7] , refer.iloc[:,1] , 'k', lw=lwh, label="reference")
 axes.plot(gd.iloc[:,7] , gd.iloc[:,1], 'r', lw=lwh, label="$\\nabla \\rho$")
 axes.plot(gm.iloc[:,7] , gm.iloc[:,1], 'b', lw=lwh, label="$\\nabla M$")
 axes.plot(gp.iloc[:,7] , gp.iloc[:,1], 'k--', lw=lwh, label="$\\nabla P$")
-# axes.plot(gt.iloc[:,7] , gt.iloc[:,1] , 'r--', lw=lwh, label="$\\nabla T$")
+axes.plot(gt.iloc[:,7] , gt.iloc[:,1] , 'r--', lw=lwh, label="$\\nabla T$")
 
 axes.set_xlabel('$Y[mm]$',fontsize=12)
 #axes.set_yscale("log")
@@ -60,7 +60,7 @@ axes.legend(loc=0 , prop={'size': 10}) #
 # axes.set_xlim(0,0.12)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("refer_nn_gra_m.pdf")
+fig2.savefig("refer_nn_gra_m.pdf")
 
 fig3 = plt.figure( dpi=300)
 lwh = 2
@@ -69,7 +69,7 @@ axes.plot(refer.iloc[:,7] , refer.iloc[:,3]/refer.iloc[0,3] , 'k', lw=lwh, label
 axes.plot(gd.iloc[:,7] , gd.iloc[:,3]/refer.iloc[0,3] , 'r', lw=lwh, label="$\\nabla \\rho$")
 axes.plot(gm.iloc[:,7] , gm.iloc[:,3]/refer.iloc[0,3] , 'b', lw=lwh, label="$\\nabla M$")
 axes.plot(gp.iloc[:,7] , gp.iloc[:,3]/refer.iloc[0,3] , 'k--', lw=lwh, label="$\\nabla P$")
-# axes.plot(gt.iloc[:,7] , gt.iloc[:,3]/refer.iloc[0,3] , 'r--', lw=lwh, label="$\\nabla T$")
+axes.plot(gt.iloc[:,7] , gt.iloc[:,3]/refer.iloc[0,3] , 'r--', lw=lwh, label="$\\nabla T$")
 
 axes.set_xlabel('$Y[mm]$',fontsize=12)
 #axes.set_yscale("log")
@@ -81,4 +81,4 @@ axes.legend(loc=0 , prop={'size': 10}) #
 # axes.set_xlim(0,0.12)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("refer_nn_gra_t.pdf")
+fig3.savefig("refer_nn_gra_t.pdf")

@@ -15,7 +15,7 @@ refer= pd.read_csv("../../../../nonideal/nn/reference/axis.csv", ",", skiprows=0
 gd= pd.read_csv("../../../../nonideal/nn/gradient/d/axis.csv", ",", skiprows=0)
 gm= pd.read_csv("../../../../nonideal/nn/gradient/m/axis.csv", ",", skiprows=0)
 gp= pd.read_csv("../../../../nonideal/nn/gradient/p/axis.csv", ",", skiprows=0)
-# gt= pd.read_csv("../../../ideal/GRADIENT/TEMPERATURE/axis.csv", ",", skiprows=0)
+gt= pd.read_csv("../../../../nonideal/nn/gradient/t/axis.csv", ",", skiprows=0)
 
 
 
@@ -26,7 +26,7 @@ axes.plot(refer.iloc[:,6] , refer.iloc[:,2]/refer.iloc[0,2] , 'k', lw=lwh, label
 axes.plot(gd.iloc[:,6] , gd.iloc[:,2]/gd.iloc[0,2] , 'r', lw=lwh, label="$\\nabla \\rho$")
 axes.plot(gm.iloc[:,6] , gm.iloc[:,2]/gm.iloc[0,2] , 'b', lw=lwh, label="$\\nabla M$")
 axes.plot(gp.iloc[:,6] , gp.iloc[:,2]/gp.iloc[0,2] , 'k--', lw=lwh, label="$\\nabla P$")
-# axes.plot(gt.iloc[:,6] , gt.iloc[:,2]/gt.iloc[0,2] , 'r--', lw=lwh, label="$\\nabla T$")
+axes.plot(gt.iloc[:,6] , gt.iloc[:,2]/gt.iloc[0,2] , 'r--', lw=lwh, label="$\\nabla T$")
 
 
 

@@ -59,7 +59,7 @@ axes.legend(loc=0 , prop={'size': 10}) #
 # axes.set_xlim(0,0.12)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("refer_ideal_aniso_m.pdf")
+fig2.savefig("refer_ideal_aniso_m.pdf")
 
 fig3 = plt.figure( dpi=300)
 lwh = 2
@@ -80,4 +80,4 @@ axes.legend(loc=0 , prop={'size': 10}) #
 # axes.set_xlim(0,0.12)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("refer_ideal_aniso_t.pdf")
+fig3.savefig("refer_ideal_aniso_t.pdf")
