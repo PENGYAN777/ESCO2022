@@ -16,7 +16,7 @@ gd= pd.read_csv("../../../../nonideal/nn/aniso/d/axis.csv", ",", skiprows=0)
 gm= pd.read_csv("../../../../nonideal/nn/aniso/m/axis.csv", ",", skiprows=0)
 gp= pd.read_csv("../../../../nonideal/nn/aniso/p/axis.csv", ",", skiprows=0)
 gt= pd.read_csv("../../../../nonideal/nn/aniso/t/axis.csv", ",", skiprows=0)
-
+ge= pd.read_csv("../../../../nonideal/nn/aniso/e/axis.csv", ",", skiprows=0)
 
 
 
@@ -28,7 +28,7 @@ axes.plot(gd.iloc[:,6] , gd.iloc[:,2]/gd.iloc[0,2] , 'r', lw=lwh, label="aniso $
 axes.plot(gm.iloc[:,6] , gm.iloc[:,2]/gm.iloc[0,2] , 'b', lw=lwh, label="aniso $M$")
 axes.plot(gp.iloc[:,6] , gp.iloc[:,2]/gp.iloc[0,2] , 'k--', lw=lwh, label="aniso $P$")
 axes.plot(gt.iloc[:,6] , gt.iloc[:,2]/gt.iloc[0,2] , 'r--', lw=lwh, label="aniso $T$")
-
+axes.plot(ge.iloc[:,6] , ge.iloc[:,2]/ge.iloc[0,2] , 'b--', lw=lwh, label="aniso $s$")
 
 
 
