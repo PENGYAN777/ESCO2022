@@ -17,6 +17,7 @@ gd= pd.read_csv("../../../../nonideal/mm/hessian/d/radial.csv", ",", skiprows=0)
 gm= pd.read_csv("../../../../nonideal/mm/hessian/m/radial.csv", ",", skiprows=0)
 gp= pd.read_csv("../../../../nonideal/mm/hessian/p/radial.csv", ",", skiprows=0)
 gt= pd.read_csv("../../../../nonideal/mm/hessian/t/radial.csv", ",", skiprows=0)
+ge= pd.read_csv("../../../../nonideal/mm/hessian/e/radial.csv", ",", skiprows=0)
 
 
 fig1 = plt.figure( dpi=300)
@@ -27,7 +28,7 @@ axes.plot(gd.iloc[:,7] , gd.iloc[:,0]/refer.iloc[0,0]*12.9 , 'r', lw=lwh,  label
 axes.plot(gm.iloc[:,7] , gm.iloc[:,0]/refer.iloc[0,0]*12.9 , 'b', lw=lwh,  label="$H(M)$")
 axes.plot(gp.iloc[:,7] , gp.iloc[:,0]/refer.iloc[0,0]*12.9 , 'k--', lw=lwh,  label="$H(P)$")
 axes.plot(gt.iloc[:,7] , gt.iloc[:,0]/refer.iloc[0,0]*12.9 , 'r--', lw=lwh,  label="$H(T)$")
-
+axes.plot(ge.iloc[:,7] , ge.iloc[:,0]/refer.iloc[0,0]*12.9 , 'b--', lw=lwh,  label="$H(s)$")
 
 axes.set_xlabel('$Y[mm]$',fontsize=12)
 #axes.set_yscale("log")
@@ -49,6 +50,7 @@ axes.plot(gd.iloc[:,7] , gd.iloc[:,1], 'r', lw=lwh,  label="$H(\\rho)$")
 axes.plot(gm.iloc[:,7] , gm.iloc[:,1], 'b', lw=lwh,  label="$H(M)$")
 axes.plot(gp.iloc[:,7] , gp.iloc[:,1], 'k--', lw=lwh,  label="$H(P)$")
 axes.plot(gt.iloc[:,7] , gt.iloc[:,1] , 'r--', lw=lwh,  label="$H(T)$")
+axes.plot(ge.iloc[:,7] , ge.iloc[:,1] , 'b--', lw=lwh,  label="$H(s)$")
 
 axes.set_xlabel('$Y[mm]$',fontsize=12)
 #axes.set_yscale("log")
@@ -70,6 +72,7 @@ axes.plot(gd.iloc[:,7] , gd.iloc[:,3]/refer.iloc[0,3]*300, 'r', lw=lwh,  label="
 axes.plot(gm.iloc[:,7] , gm.iloc[:,3]/refer.iloc[0,3]*300 , 'b', lw=lwh,  label="$H(M)$")
 axes.plot(gp.iloc[:,7] , gp.iloc[:,3]/refer.iloc[0,3] *300, 'k--', lw=lwh,  label="$H(P)$")
 axes.plot(gt.iloc[:,7] , gt.iloc[:,3]/refer.iloc[0,3]*300 , 'r--', lw=lwh,  label="$H(T)$")
+axes.plot(ge.iloc[:,7] , ge.iloc[:,3]/refer.iloc[0,3]*300 , 'b--', lw=lwh,  label="$H(s)$")
 
 axes.set_xlabel('$Y[mm]$',fontsize=12)
 #axes.set_yscale("log")
